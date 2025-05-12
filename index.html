@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shows Streaming Subscription</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>Unlimited Streaming</h1>
+      <p>Stream the best shows! Choose your plan:</p>
+    </header>
+
+    <section class="plans fade-in">
+      <div class="plan-card">
+        <h2>Basic</h2>
+        <p class="price">$10/month</p>
+        <ul>
+          <li>HD Available</li>
+          <li>Watch on 1 screen</li>
+          <li>No ads</li>
+        <nod/ul>
+        <button class="subscribe-button" data-plan="basic" data-price="10">Choose Basic</button>
+      </div>
+      <div class="plan-card featured">
+        <h2>Premium</h2>
+        <p class="price">$20/month</p>
+        <ul>
+          <li>Ultra HD</li>
+          <li>Watch on 3 screens</li>
+          <li>No ads</li>
+        </ul>
+        <button class="subscribe-button" data-plan="premium" data-price="20">Choose Premium</button>
+      </div>
+    </section>
+
+    <section id="payment-section" class="hidden fade-in">
+      <h2>Enter Your Payment Details</h2>
+      <form id="payment-form">
+        <div id="card-element"></div>
+        <button type="submit" id="submit">Pay Now</button>
+      </form>
+      <div id="payment-message"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Danae's Movie Streaming.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
